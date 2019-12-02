@@ -9,6 +9,7 @@
 import React from "react";
 
 import Cyphers from "../components/cyphers";
+import Button from "../components/button";
 
 const styles = {
     container: {
@@ -29,16 +30,27 @@ const styles = {
     tools: {
         height: "5rem",
         flex: "none",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
 };
 
-export default () => (
-    <div style={styles.container}>
-        <div style={styles.timer}>
-            <Cyphers value={0} />
-            {":"}
-            <Cyphers value={0} />
+export default () => {
+    const handleStartStop = () => console.warn("start/stop!");
+    const handleReset = () => console.warn("reset!");
+
+    return (
+        <div style={styles.container}>
+            <div style={styles.timer}>
+                <Cyphers value={0} />
+                {":"}
+                <Cyphers value={0} />
+            </div>
+            <div style={styles.tools}>
+                <Button label={"Reset"} onClick={handleReset} disabled />{" "}
+                <Button label={"Start"} onClick={handleStartStop} />
+            </div>
         </div>
-        <div style={styles.tools} />
-    </div>
-);
+    );
+};
