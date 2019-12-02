@@ -10,6 +10,7 @@ import React, {useState, useEffect, useCallback} from "react";
 
 import Cyphers from "../components/cyphers";
 import Button from "../components/button";
+import Modal from "../components/modal";
 
 const styles = {
     container: {
@@ -44,6 +45,7 @@ export default () => {
     const [intervalId, setIntervalId] = useState();
     const [timer, setTimer] = useState(DEFAULT_TIMER_VALUE);
     const [running, setRunning] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         if (running) {
@@ -67,7 +69,7 @@ export default () => {
     useEffect(() => {
         if (timer === 0) {
             setRunning(false);
-            console.warn("Show modal!");
+            setShowModal(true);
         }
     }, [timer]);
 
@@ -82,6 +84,7 @@ export default () => {
 
     return (
         <div style={styles.container}>
+            {showModal ? <Modal /> : null}
             <div style={styles.timer}>
                 <Cyphers value={Math.floor(timer / 60)} />
                 {separator}
