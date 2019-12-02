@@ -5,8 +5,8 @@
   "description": "Code for React first pomodoro",
   "main": "src/app.js",
   "scripts": {
-    "build": "npx parcel build index.html",
-    "work": "npx parcel index.html",
+    "build": "npx parcel build src/index.html",
+    "work": "npx parcel src/index.html",
     "lint": "npx eslint --fix --cache src"
   },
   "repository": {
