@@ -9,6 +9,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Pomodoro from "./pomodoro";
+import Pomodoro from "./containers/pomodoro";
 
 ReactDOM.render(<Pomodoro />, document.querySelector("#app"));
