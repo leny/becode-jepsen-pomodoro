@@ -1,0 +1,19 @@
+{
+  "name": "pomodoro",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Code for React first pomodoro",
+  "main": "src/app.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leny/becode-jepsen-pomodoro.git"
+  },
+  "author": "leny <leny@becode.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leny/becode-jepsen-pomodoro/issues"
+  },
+  "homepage": "https://github.com/leny/becode-jepsen-pomodoro#readme"
+}
