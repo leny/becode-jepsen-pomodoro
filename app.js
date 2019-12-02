@@ -6,4 +6,7 @@
  * started at 02/12/2019
  */
 
-console.log("hello, world!");
+import React from "react";
+import ReactDOM from "react-dom";
+
+ReactDOM.render(<h1>{"hello, world"}</h1>, document.querySelector("#app"));
