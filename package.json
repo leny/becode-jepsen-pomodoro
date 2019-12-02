@@ -5,6 +5,8 @@
   "description": "Code for React first pomodoro",
   "main": "src/app.js",
   "scripts": {
+    "build": "npx parcel build index.html",
+    "work": "npx parcel index.html"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/leny/becode-jepsen-pomodoro/issues"
   },
-  "homepage": "https://github.com/leny/becode-jepsen-pomodoro#readme"
+  "homepage": "https://github.com/leny/becode-jepsen-pomodoro#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }
