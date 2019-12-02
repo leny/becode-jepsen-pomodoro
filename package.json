@@ -6,7 +6,8 @@
   "main": "src/app.js",
   "scripts": {
     "build": "npx parcel build index.html",
-    "work": "npx parcel index.html"
+    "work": "npx parcel index.html",
+    "lint": "npx eslint --fix --cache src"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,26 @@
   },
   "homepage": "https://github.com/leny/becode-jepsen-pomodoro#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "@becode/eslint-config": "^0.8.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-unicorn": "^14.0.1",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npx eslint --fix --cache",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
   }
 }
